@@ -1,0 +1,184 @@
+/* Основной фон и цвет текста */
+body {
+    background-color: #1e1e2e;
+    color: #c9d1d9;
+    font-family: Arial, sans-serif;
+}
+
+/* Контейнер для списка */
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+/* Карточка */
+.card {
+    background-color: #2a2a40;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+/* Заголовок карточки */
+.card-header {
+    background-color: #1e1e2e;
+    color: #c9d1d9;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding: 15px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Список элементов */
+.list-group-item {
+    background-color: #2a2a40;
+    border: none;
+    color: #c9d1d9;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+}
+
+/* Разделители между элементами */
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+
+/* Текст внутри списка */
+.list-group-item span {
+    font-weight: 500;
+}
+
+/* Общие стили для формы */
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Пространство между элементами формы */
+    margin: 15px 15px 0; /* Отступы вокруг формы */
+}
+
+/* Стили для поля ввода */
+input[type="text"] {
+    flex-grow: 1; /* Поле ввода будет занимать большую часть пространства */
+    background-color: #2a2a40;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    color: #c9d1d9;
+    font-size: 1rem;
+    outline: none; /* Убираем эффект фокуса по умолчанию */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+input[type="text"]:focus {
+    background-color: #3a3a50; /* Изменение цвета при фокусе */
+}
+
+/* Стили для кнопки */
+button {
+    background-color: #4b5563;
+    color: #c9d1d9;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анимация при наведении */
+}
+
+button:hover {
+    background-color: #606a78; /* Изменение цвета при наведении */
+    transform: scale(1.05); /* Небольшое увеличение размера */
+}
+
+button:active {
+    transform: scale(0.95); /* Уменьшение размера при нажатии */
+}
+
+/* Стили для круглой красной кнопки */
+.circular-red-button {
+    background-color: #e74c3c; /* Красный цвет */
+    border: none; /* Без границы */
+    width: 40px; /* Ширина */
+    height: 40px; /* Высота */
+    border-radius: 50%; /* Делает кнопку круглой */
+    cursor: pointer; /* Указатель мыши при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анимация */
+    display: flex; /* Для центрирования содержимого */
+    align-items: center; /* Вертикальное центрирование */
+    justify-content: center; /* Горизонтальное центрирование */
+    color: white; /* Белый текст или иконка */
+    font-size: 1rem; /* Размер шрифта */
+    box-sizing: border-box; /* Учитывает padding и border */
+}
+
+/* При наведении на кнопку */
+.circular-red-button:hover {
+    background-color: #c0392b; /* Темнее красный цвет */
+    transform: scale(1.1); /* Немного увеличивается */
+}
+
+/* При нажатии на кнопку */
+.circular-red-button:active {
+    transform: scale(0.9); /* Уменьшается */
+}
+
+/* Общие стили для формы поиска */
+.search-form {
+    display: flex;
+    gap: 10px; /* Пространство между элементами */
+}
+
+/* Стили для поля ввода */
+.search-form .form-control {
+    background-color: #2a2a40; /* Темный фон */
+    border: 1px solid #4b5563; /* Выделенная рамка */
+    border-radius: 6px; /* Закругленные углы */
+    color: #c9d1d9; /* Белый текст */
+    padding: 10px; /* Отступы внутри поля */
+    font-size: 1rem; /* Размер шрифта */
+    outline: none; /* Убираем эффект фокуса по умолчанию */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Плавный переход цвета рамки */
+}
+
+/* Цвет плейсхолдера (белый) */
+.search-form .form-control::placeholder {
+    color: #c9d1d9; /* Белый цвет плейсхолдера */
+    opacity: 0.7; /* Немного прозрачнее, чтобы не перегружать дизайн */
+}
+
+/* Изменение рамки при фокусе */
+.search-form .form-control:focus {
+    border-color: #8b5cf6; /* Фиолетовый цвет для акцента */
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.5); /* Добавляем тень вокруг поля */
+}
+
+.search-form .form-control:focus {
+    border-color: #8b5cf6; /* Фиолетовый цвет для акцента */
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.5); /* Добавляем тень вокруг поля */
+}
+
+/* Стили для кнопки остаются без изменений */
+.search-form .btn-outline-secondary {
+    background-color: #4b5563; /* Темно-серый цвет */
+    color: #c9d1d9; /* Белый текст */
+    border: none; /* Без границы */
+    border-radius: 6px; /* Закругленные углы */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 1rem; /* Размер шрифта */
+    cursor: pointer; /* Указатель мыши при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анимация */
+}
+
+/* При наведении на кнопку */
+.search-form .btn-outline-secondary:hover {
+    background-color: #606a78; /* Темнее серый цвет */
+    transform: scale(1.05); /* Немного увеличивается */
+}
+
+/* При нажатии на кнопку */
+.search-form .btn-outline-secondary:active {
+    transform: scale(0.95); /* Уменьшается */
+}
