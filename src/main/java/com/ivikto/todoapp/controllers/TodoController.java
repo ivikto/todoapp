@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +38,7 @@ public class TodoController implements CommandLineRunner {
 
     @PostMapping("/add")
     public String add(@ModelAttribute Todoitem todoitem) {
+
         todoItemRepository.save(todoitem);
 
         return "redirect:/";
